@@ -17,10 +17,10 @@ def main():
         filename = argv[1]
         outfile = argv[2]
     except:
-        filename = 'data/Afternoon_Walk.gpx'
-        outfile = 'data/test.gpx'
-        # filename = input('enter filename:')
-        # outfile = input('enter outfile:')
+        # filename = 'data/Afternoon_Walk.gpx'
+        # outfile = 'data/test.gpx'
+        filename = input('enter filename:')
+        outfile = input('enter outfile:')
     gpx_file = open(f'{filename}', 'r')
     gpx = gpxpy.parse(gpx_file)
     print("time now: ", gpx.time)

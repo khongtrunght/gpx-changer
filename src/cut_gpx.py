@@ -17,10 +17,11 @@ def main():
         filename = argv[1]
         outfile = argv[2]
     except:
-        filename = 'data/test.gpx'
-        outfile = 'data/test2.gpx'
-        # filename = input('enter filename:')
-        # outfile = input('enter outfile:')
+        # filename = 'data/test.gpx'
+        # outfile = 'data/test2.gpx'
+        filename = input('enter filename:')
+        outfile = input('enter outfile:')
+
     gpx_file = open(f'{filename}', 'r')
     gpx = gpxpy.parse(gpx_file)    
     before = float(input('Cut truoc: ') )           
